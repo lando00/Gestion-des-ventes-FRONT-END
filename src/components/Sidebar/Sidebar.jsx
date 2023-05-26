@@ -1,6 +1,8 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './Sidebar.css';
 import logo from '../../assets/images/logo.png';
+
 
 const Sidebar = () => {
   return (
@@ -8,29 +10,29 @@ const Sidebar = () => {
         <img src={logo} alt="logo" className='logo' />
         <ul className="menu">
             <li>
-                <a href="#" className='menu-active'>
+                <NavLink to="/" className='menu-active'>
                     <i className='fas fa-chart-simple'></i>Dashboard
-                </a>
+                </NavLink>
             </li>
             <li>
-                <a href="#">
+                <NavLink to="/clients">
                     <i className='fas fa-users'></i>Clients
-                </a>
+                </NavLink>
             </li>
             <li>
-                <a href="#">
+                <NavLink to="/materiels">
                     <i className='fas fa-box-archive'></i>Matériels
-                </a>
+                </NavLink>
             </li>
             <li>
-                <a href="#">
+                <NavLink to="/ventes">
                     <i className='fas fa-shopping-cart'></i>Ventes
-                </a>
+                </NavLink>
             </li>
             <li>
-                <a href="#">
+                <NavLink to="/parametres">
                     <i className='fas fa-gear'></i>Paramètres
-                </a>
+                </NavLink>
             </li>
             <li>
                 <a href="#">

@@ -18,3 +18,8 @@ body{
   width: 100vw;
   display: flex;
 }
+
+.pages-container{
+  flex: 1;
+  padding: 30px;
+}

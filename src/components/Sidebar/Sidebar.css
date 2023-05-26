@@ -2,7 +2,7 @@
     width: 280px;
     height: 100%;
     background-color: #1d1c58;
-    position: fixed;
+    position: sticky;
     top: 0;
     text-align: center;
 }
@@ -44,7 +44,7 @@
     color : #fff;
 }
 
-.menu-active{
+.active{
     color: #fff!important;
 }
 
