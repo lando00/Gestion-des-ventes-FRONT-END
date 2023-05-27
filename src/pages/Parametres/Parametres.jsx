@@ -1,10 +1,13 @@
 import React from 'react';
 import './Parametres.css';
+import TitrePage from '../../components/TitrePage/TitrePage';
 
 const Parametres = () => {
   return (
 
-    <div className='parametres'>Parametres</div>
+    <div className='parametres'>
+       <TitrePage titre="Paramètres" />
+    </div>
 
   )
 }
