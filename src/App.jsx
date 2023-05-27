@@ -20,6 +20,8 @@ import MouvementMateriel from './pages/Materiels/MouvementMateriel';
 import ModifierMateriel from './pages/Materiels/ModifierMateriel';
 
 import Ventes from './pages/Ventes/Ventes';
+import ListeVente from './pages/Ventes/ListeVente';
+import NouveauVente from './pages/Ventes/NouveauVente';
 
 import Parametres from './pages/Parametres/Parametres';
 
@@ -48,7 +50,10 @@ function App() {
             <Route path='/materiels/mouvement' element={<MouvementMateriel />} />
             <Route path='/materiels/modifier' element={<ModifierMateriel />} />
           </Route>
-          <Route path="/ventes" element={<Ventes />} />
+          <Route path="/ventes" element={<Ventes />} >
+            <Route path='/ventes/liste' element={<ListeVente />} />
+            <Route path='/ventes/nouveau' element={<NouveauVente />} />
+          </Route>
           <Route path="/parametres" element={<Parametres />} />
         </Routes>
       </div>
