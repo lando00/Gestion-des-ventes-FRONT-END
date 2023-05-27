@@ -6,7 +6,7 @@ import TabListeClients from '../../../components/Tableau/TabListeClients';
 const index = () => {
   return (
     <div className='liste-clients'>
-      <BarreRecherche />
+      <BarreRecherche placeholder="client" />
       <TabListeClients />
     </div>
   )

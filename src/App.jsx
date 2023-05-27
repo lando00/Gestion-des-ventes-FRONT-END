@@ -13,6 +13,11 @@ import InfoClients from './pages/Clients/InfoClients';
 import FactureClients from './pages/Clients/Facture';
 
 import Materiels from './pages/Materiels/Materiels';
+import ListeMateriel from './pages/Materiels/ListeMateriel';
+import ListeMaterielVendu from './pages/Materiels/ListeMaterielVendu';
+import NouveauMateriel from './pages/Materiels/NouveauMateriel';
+import MouvementMateriel from './pages/Materiels/MouvementMateriel';
+import ModifierMateriel from './pages/Materiels/ModifierMateriel';
 
 import Ventes from './pages/Ventes/Ventes';
 
@@ -36,7 +41,13 @@ function App() {
             <Route path="/clients/info/:id" element={<InfoClients />} />
             <Route path="/clients/facture" element={<FactureClients />} />
           </Route>
-          <Route path="/materiels" element={<Materiels />} />
+          <Route path="/materiels" element={<Materiels />} >
+            <Route path='/materiels/liste' element={<ListeMateriel />} />
+            <Route path='/materiels/liste_materiel_vendu' element={<ListeMaterielVendu />} />
+            <Route path='/materiels/nouveau' element={<NouveauMateriel />} />
+            <Route path='/materiels/mouvement' element={<MouvementMateriel />} />
+            <Route path='/materiels/modifier' element={<ModifierMateriel />} />
+          </Route>
           <Route path="/ventes" element={<Ventes />} />
           <Route path="/parametres" element={<Parametres />} />
         </Routes>

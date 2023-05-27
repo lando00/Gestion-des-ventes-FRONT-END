@@ -1,11 +1,33 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import './Materiels.css';
 import TitrePage from '../../components/TitrePage/TitrePage';
 
 const Materiels = () => {
+
+  const navigate = useNavigate();
+  useEffect(() => { 
+    navigate("/materiels/liste");
+  },[])
+  
   return (
     <div className='materiels'>
        <TitrePage titre="Matériels" />
+       <ul className="sous-menu">
+          <li>
+            <NavLink to="/materiels/liste">TOUS LES MATERIELS</NavLink>
+          </li>
+          <li>
+            <NavLink to="/materiels/liste_materiel_vendu">MATERIEL VENDU</NavLink>
+          </li>
+          <li>
+            <NavLink to="/materiels/nouveau">NOUVEAU MATERIEL</NavLink>
+          </li>
+          <li>
+            <NavLink to="/materiels/mouvement">MOUVEMENT MATERIEL</NavLink>
+          </li> 
+        </ul>
+        <Outlet />
     </div>
   )
 }
