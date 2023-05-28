@@ -1,3 +1,9 @@
 .dashboard{
     flex: 1;
 }
+
+.dashboard .card-container{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
