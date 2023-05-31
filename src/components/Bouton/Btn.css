@@ -10,6 +10,12 @@
 
 .btn-vert{
     background-color: #4CAF50;
+   
+}
+
+.btn-vert .btn-handle-clicked{
+    background-color: #3e8e41;
+    cursor: auto;
 }
 
 .btn-vert:hover {
