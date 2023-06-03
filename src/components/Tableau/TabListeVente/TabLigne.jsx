@@ -1,25 +1,25 @@
 import React from 'react';
 
-const TabLigne = () => {
+const TabLigne = ({numVente, nomClient, materiel, montant, quantite, prixUnitaire, date}) => {
   return (
     <div className="entree">
         <div className="cellules">
-            <span>Rabe</span>
+            <span>{nomClient}</span>
         </div>
         <div className="cellules">
-            <span>Ecran</span>
+            <span>{materiel}</span>
         </div>
         <div className="cellules">
-            <span>50000Ar</span>
+            <span>{prixUnitaire} Ar</span>
         </div>
         <div className="cellules">
-            <span>5</span>
+            <span>{quantite}</span>
         </div>
         <div className="cellules">
-            <span>15000</span>
+            <span>{montant}</span>
         </div>
         <div className="cellules">
-            <span>23/04/2023</span>
+            <span>{date}</span>
         </div>
         <div className="cellules"> 
             <span><i className='fas fa-trash-can' style={{color:'#fe3a3a', marginLeft:'25px'}} title='Supprimer'></i></span>

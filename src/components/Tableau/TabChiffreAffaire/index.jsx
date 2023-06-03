@@ -3,20 +3,16 @@ import TabLigne from './TabLigne';
 import TabLigneTitre from './TabLigneTitre';
 import './TabChiffreAffaire.css';
 import '../TabStyle.css';
+import Loader from '../../Loader/Loader';
 
-const index = () => {
+const index = ({chiffreAffaire}) => {
   return (
     <div className="tableau tab-chiffre-affaire">
         <TabLigneTitre />
-        <TabLigne />
-        <TabLigne />
-        <TabLigne />
-        <TabLigne />
-        <TabLigne />
-        <TabLigne />
-        <TabLigne />
-        <TabLigne />
-        <TabLigne />
+        {
+         chiffreAffaire.length > 0 ? chiffreAffaire.map(ca => <TabLigne key={ca.numClient} numClient={ca.numClient} nomClient={ca.nom} prenomClient={ca.prenom} montant={ca.montant} /> ) : <Loader />
+        }
+       
     </div>
   )
 }

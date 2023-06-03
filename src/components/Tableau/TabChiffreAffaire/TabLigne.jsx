@@ -1,16 +1,16 @@
 import React from 'react';
 
-const TabLigne = () => {
+const TabLigne = ({numClient, nomClient, prenomClient, montant}) => {
   return (
     <div className="entree">
         <div className="cellules">
-            <span>CL01</span>
+            <span>{numClient}</span>
         </div>
         <div className="cellules">
-            <span>RAKOTONIRINA Rabe</span>
+            <span>{nomClient} {prenomClient}</span>
         </div>
         <div className="cellules">
-            <span>750000</span>
+            <span>{montant} Ar</span>
         </div>
     </div>
 

@@ -41,14 +41,14 @@ function App() {
             <Route path="/clients/modifier/:id" element={<ModifierClients />} />
             <Route path="/clients/chiffre_affaire" element={<ChiffreAffaire />} />
             <Route path="/clients/info/:id" element={<InfoClients />} />
-            <Route path="/clients/facture" element={<FactureClients />} />
+            <Route path="/clients/facture/:id" element={<FactureClients />} />
           </Route>
           <Route path="/materiels" element={<Materiels />} >
             <Route path='/materiels/liste' element={<ListeMateriel />} />
             <Route path='/materiels/liste_materiel_vendu' element={<ListeMaterielVendu />} />
             <Route path='/materiels/nouveau' element={<NouveauMateriel />} />
             <Route path='/materiels/mouvement' element={<MouvementMateriel />} />
-            <Route path='/materiels/modifier' element={<ModifierMateriel />} />
+            <Route path='/materiels/modifier/:id' element={<ModifierMateriel />} />
           </Route>
           <Route path="/ventes" element={<Ventes />} >
             <Route path='/ventes/liste' element={<ListeVente />} />

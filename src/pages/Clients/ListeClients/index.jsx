@@ -29,7 +29,7 @@ const index = () => {
 
   return (
     <div className='liste-clients'>
-      <BarreRecherche placeholder="client" setClientRechercher={setClientRechercher} />
+      <BarreRecherche placeholder="client" rechercher={setClientRechercher} />
       <TabListeClients listeClient={listeClientFiltrer(clientRechercher)} showLoader={showLoader} setRechargerPage={setRechargerPage} />
     </div>
   )
