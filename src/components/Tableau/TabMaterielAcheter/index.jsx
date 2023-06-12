@@ -11,7 +11,7 @@ const index = ({listeMateriel, showLoader}) => {
     <div className="tableau tab-materiel-acheter">
         <TabLigneTitre />
         {
-         showLoader ? <Loader /> : listeMateriel.length > 0 ? listeMateriel.map(materiel => <TabLigne numMateriel={materiel.numMateriel} design={materiel.design} prixUnitaire={materiel.prixUnitaire} quantite={materiel.quantite} montant={materiel.montant} />) : <PasDeMateriel />
+         showLoader ? <Loader /> : listeMateriel.length > 0 ? listeMateriel.map(materiel => <TabLigne numMateriel={materiel.numMateriel} design={materiel.design} prixUnitaire={materiel.prixUnitaire} quantite={materiel.quantite} montant={materiel.montant} date={materiel.date} />) : <PasDeMateriel />
         }
         
     </div>

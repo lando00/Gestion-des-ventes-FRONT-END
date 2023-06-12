@@ -18,6 +18,9 @@ const TabLigneTitre = () => {
         <div className="cellules">
             <span>MONTANT</span>
         </div>
+        <div className="cellules">
+            <span>DATE</span>
+        </div>
     </div>
   )
 }

@@ -1,22 +1,22 @@
 import React from 'react';
 
-const TabLigne = () => {
+const TabLigne = ({materiel}) => {
   return (
     <div className="entree">
         <div className="cellules">
-            <span>MAT01</span>
+            <span>{materiel.numMateriel}</span>
         </div>
         <div className="cellules">
-            <span>Ecran</span>
+            <span>{materiel.design}</span>
         </div>
         <div className="cellules">
-            <span>50000Ar</span>
+            <span>{materiel.prixUnitaire} Ar</span>
         </div>
         <div className="cellules">
-            <span>30</span>
+            <span>{materiel.quantite}</span>
         </div>
         <div className="cellules"> 
-            <span>750000Ar</span>
+            <span>{materiel.montant} Ar</span>
         </div>  
     </div>
 

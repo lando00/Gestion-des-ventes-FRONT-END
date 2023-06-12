@@ -1,27 +1,28 @@
 import React from 'react';
 
-const TabLigne = () => {
+const TabLigne = ({materiel, handleClickIconDelete, handleChangeQuantite}) => {
+
   return (
     <div className="entree">
         <div className="cellules">
-            <span>Ecran</span>
+            <span>{materiel.design}</span>
         </div>
         <div className="cellules">
-            <span>15</span>
+            <span>{materiel.stock}</span>
         </div>
         <div className="cellules">
-            <span>50000Ar</span>
+            <span>{materiel.prixUnitaire} Ar</span>
         </div>
         <div className="cellules">
             <span>
-                <input type='number' value="50" style={{width: '50px', padding: '4px', border: '1px solid #d1cfcf', color: '#333333ad', borderRadius: '3px', outline: 'none'}} />
+                x <input type='number' value={materiel.quantite} min="1" max={materiel.stock}  onChange={e => {handleChangeQuantite(e, materiel.numMateriel)}} style={{width: '50px', padding: '4px', border: '1px solid #d1cfcf', color: '#333333ad', borderRadius: '3px', outline: 'none'}} />
             </span>
         </div>
         <div className="cellules">
-            <span>15000</span>
+            <span>{materiel.montant} Ar</span>
         </div>
         <div className="cellules"> 
-            <span><i className='fas fa-trash-can' style={{color:'#fe3a3a', marginLeft:'25px'}} title='Supprimer'></i></span>
+            <span onClick={() => handleClickIconDelete(materiel.numMateriel)}><i className='fas fa-trash-can' style={{color:'#fe3a3a', marginLeft:'25px'}} title='Supprimer'></i></span>
         </div>  
     </div>
 

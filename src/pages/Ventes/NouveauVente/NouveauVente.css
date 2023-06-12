@@ -26,9 +26,14 @@
     margin-left: 0px;
     width: 100%;
     padding: 8px 8px;
-    color : #333333ad;
 }
 
 .effectuer-vente .btn .btn{
     margin-left: 10px;
+}
+
+.label-choix-materiel{
+    font-size: 0.85rem;
+    color: #333333ad;
+    margin-bottom: 10px
 }

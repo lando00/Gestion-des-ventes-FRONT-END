@@ -10,7 +10,7 @@ const TabLigne = ({num, nom, prenom, tel, setRechargerPage}) => {
 
 
   const handleClickIconDelete = (num) => {
-
+ 
     Swal.fire({
         text: `Voulez-vous vraiment supprimer ${prenom} ?`,
         icon: 'warning',
@@ -54,17 +54,17 @@ const TabLigne = ({num, nom, prenom, tel, setRechargerPage}) => {
         </div>
         <div className="cellules">
             <span>
-                <Link to={`/clients/info/${num}`}>          
+                <Link to={`/app/clients/info/${num}`}>          
                     <i className='fas fa-address-card' style={{color:'#4caf50'}} title='Info client'></i>
                 </Link>
             </span>
             <span>
-                <Link to={`/clients/facture/${num}`}>
+                <Link to={`/app/clients/facture/${num}`}>
                     <i className='fas fa-rectangle-list' style={{color:'#4caf50'}} title='Facture'></i>
                 </Link>
             </span>
             <span>
-                <Link to={`/clients/modifier/${num}`}>
+                <Link to={`/app/clients/modifier/${num}`}>
                     <i className='fas fa-pen-to-square'style={{color:'#4caf50'}} title='Editer'></i>
                 </Link>
             </span>

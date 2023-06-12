@@ -13,7 +13,7 @@ const TabLigneTitre = () => {
             <span>PRIX UNITAIRE</span>
         </div>
         <div className="cellules">
-            <span>STOCK</span>
+            <span>QUANTITE</span>
         </div>
         <div className="cellules">
             <span>MONTANT</span>

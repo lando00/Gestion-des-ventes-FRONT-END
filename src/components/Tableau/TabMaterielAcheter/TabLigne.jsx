@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TabLigne = ({numMateriel, design, prixUnitaire, quantite, montant}) => {
+const TabLigne = ({numMateriel, design, prixUnitaire, quantite, montant, date}) => {
   return (
     <div className="entree">
         <div className="cellules">
@@ -17,6 +17,9 @@ const TabLigne = ({numMateriel, design, prixUnitaire, quantite, montant}) => {
         </div>
         <div className="cellules">
             <span>{montant} Ar</span>
+        </div>
+        <div className="cellules">
+            <span>{date}</span>
         </div>  
     </div>
 

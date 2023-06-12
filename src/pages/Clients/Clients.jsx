@@ -6,20 +6,20 @@ import TitrePage from '../../components/TitrePage/TitrePage';
 const clients = () => {
   const navigate = useNavigate();
   useEffect(() => { 
-    navigate("/clients/liste");
+    navigate("/app/clients/liste");
   },[])
   return (
     <div className='clients'>
       <TitrePage titre="Clients" />
       <ul className="sous-menu">
         <li>
-          <NavLink to="/clients/liste">LISTE CLIENT</NavLink>
+          <NavLink to="/app/clients/liste">LISTE CLIENT</NavLink>
         </li>
         <li>
-          <NavLink to="/clients/nouveau">NOUVEAU CLIENT</NavLink>
+          <NavLink to="/app/clients/nouveau">NOUVEAU CLIENT</NavLink>
         </li>
         <li>
-          <NavLink to="/clients/chiffre_affaire">CHIFFRE D'AFFAIRE</NavLink>
+          <NavLink to="/app/clients/chiffre_affaire">CHIFFRE D'AFFAIRE</NavLink>
         </li>
       </ul>
       <Outlet />

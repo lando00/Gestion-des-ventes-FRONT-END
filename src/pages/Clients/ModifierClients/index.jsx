@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import InputForm from '../../../components/InputForm/InputForm';
 import BtnVert from '../../../components/Bouton/BtnVert';
 import BtnRouge from '../../../components/Bouton/BtnRouge';
@@ -43,7 +43,9 @@ const index = () => {
         <InputForm label="Prénom(s)" name="prenom" value={client.prenom} onChangeInput={setClient} />
         <InputForm label="Téléphone" name="tel" value={client.tel} onChangeInput={setClient} />
         <div className="btn-group">
-          <BtnRouge>Annuler</BtnRouge>
+          <BtnRouge>
+            <Link to="/app/clients/liste">Annuler</Link>
+          </BtnRouge>
           <BtnVert enregistrer={enregistrer}>{txtBtn}</BtnVert>
         </div>
       </div>

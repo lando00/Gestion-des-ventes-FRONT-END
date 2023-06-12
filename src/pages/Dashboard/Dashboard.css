@@ -22,3 +22,13 @@
     color: #333333ad;
     margin-bottom: 10px;
 }
+
+.titre-histogramme select{
+    margin-left: 15px;
+    width: auto;
+    border: 1px solid #d1cfcf;
+    font-size: 0.85rem;
+    padding: 5px;
+    border-radius: 3px;
+    outline: none;
+}

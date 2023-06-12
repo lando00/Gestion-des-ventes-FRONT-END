@@ -22,4 +22,5 @@ body{
 .pages-container{
   flex: 1;
   padding: 18px 30px;
+  overflow: hidden;
 }

@@ -1,6 +1,6 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import Sidebar from './components/Sidebar/Sidebar';
+import AppContainer from './components/AppContainer/AppContainer';
 
 import Dashboard from './pages/Dashboard/Dashboard';
 
@@ -24,6 +24,7 @@ import ListeVente from './pages/Ventes/ListeVente';
 import NouveauVente from './pages/Ventes/NouveauVente';
 
 import Parametres from './pages/Parametres/Parametres';
+import Login from './pages/Login/Login';
 
 
 function App() {
@@ -31,33 +32,33 @@ function App() {
 
   return (
    <div className='app'>
-      <Sidebar />
-      <div className="pages-container">
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/clients" element={<Clients />}>
-            <Route path="/clients/liste" element={<ListeClients />} />
-            <Route path="/clients/nouveau" element={<NouveauClients />} />
-            <Route path="/clients/modifier/:id" element={<ModifierClients />} />
-            <Route path="/clients/chiffre_affaire" element={<ChiffreAffaire />} />
-            <Route path="/clients/info/:id" element={<InfoClients />} />
-            <Route path="/clients/facture/:id" element={<FactureClients />} />
-          </Route>
-          <Route path="/materiels" element={<Materiels />} >
-            <Route path='/materiels/liste' element={<ListeMateriel />} />
-            <Route path='/materiels/liste_materiel_vendu' element={<ListeMaterielVendu />} />
-            <Route path='/materiels/nouveau' element={<NouveauMateriel />} />
-            <Route path='/materiels/mouvement' element={<MouvementMateriel />} />
-            <Route path='/materiels/modifier/:id' element={<ModifierMateriel />} />
-          </Route>
-          <Route path="/ventes" element={<Ventes />} >
-            <Route path='/ventes/liste' element={<ListeVente />} />
-            <Route path='/ventes/nouveau' element={<NouveauVente />} />
-          </Route>
-          <Route path="/parametres" element={<Parametres />} />
-        </Routes>
-      </div>
-   </div>
+      <Routes>
+        <Route path='/' element={<Login />}></Route>
+        <Route path='/app' element={<AppContainer />} >
+            <Route path="/app/dashboard" element={<Dashboard />} />
+            <Route path="/app/clients" element={<Clients />}>
+              <Route path="/app/clients/liste" element={<ListeClients />} />
+              <Route path="/app/clients/nouveau" element={<NouveauClients />} />
+              <Route path="/app/clients/modifier/:id" element={<ModifierClients />} />
+              <Route path="/app/clients/chiffre_affaire" element={<ChiffreAffaire />} />
+              <Route path="/app/clients/info/:id" element={<InfoClients />} />
+              <Route path="/app/clients/facture/:id" element={<FactureClients />} />
+            </Route>
+            <Route path="/app/materiels" element={<Materiels />} >
+              <Route path='/app/materiels/liste' element={<ListeMateriel />} />
+              <Route path='/app/materiels/liste_materiel_vendu' element={<ListeMaterielVendu />} />
+              <Route path='/app/materiels/nouveau' element={<NouveauMateriel />} />
+              <Route path='/app/materiels/mouvement' element={<MouvementMateriel />} />
+              <Route path='/app/materiels/modifier/:id' element={<ModifierMateriel />} />
+            </Route>
+            <Route path="/app/ventes" element={<Ventes />} >
+              <Route path='/app/ventes/liste' element={<ListeVente />} />
+              <Route path='/app/ventes/nouveau' element={<NouveauVente />} />
+            </Route>
+            <Route path="/app/parametres" element={<Parametres />} />
+        </Route>
+      </Routes>
+    </div>
   )
 }
 

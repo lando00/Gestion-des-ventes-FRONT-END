@@ -7,7 +7,7 @@ const Ventes = () => {
 
   const navigate = useNavigate();
   useEffect(() => { 
-    navigate("/ventes/liste");
+    navigate("/app/ventes/liste");
   },[])
 
   return (
@@ -15,10 +15,10 @@ const Ventes = () => {
        <TitrePage titre="Ventes" />
        <ul className="sous-menu">
           <li>
-            <NavLink to="/ventes/liste">LISTE DES VENTES</NavLink>
+            <NavLink to="/app/ventes/liste">LISTE DES VENTES</NavLink>
           </li>
           <li>
-            <NavLink to="/ventes/nouveau">EFFECTUER UNE VENTE</NavLink>
+            <NavLink to="/app/ventes/nouveau">EFFECTUER UNE VENTE</NavLink>
           </li>
         </ul>
         <Outlet />

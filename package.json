@@ -13,12 +13,15 @@
     "axios": "^1.4.0",
     "chart.js": "^4.3.0",
     "countup.js": "^2.6.2",
+    "nombre-en-toutes-lettres": "^1.1.0",
     "qs": "^6.11.2",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
+    "react-pdf": "^7.0.3",
     "react-router-dom": "^6.11.2",
+    "react-to-print": "^2.14.13",
     "sweetalert2": "^11.7.5"
   },
   "devDependencies": {

@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Parametres.css';
 import TitrePage from '../../components/TitrePage/TitrePage';
-import InputForm from '../../components/InputForm/InputForm';
+import InputPasswordForm from '../../components/InputForm/InputPasswordForm';
 import BtnVert from '../../components/Bouton/BtnVert';
 import BtnRouge from '../../components/Bouton/BtnRouge';
 
@@ -13,14 +13,14 @@ const Parametres = () => {
        <TitrePage titre="Paramètres" />
        <ul className="sous-menu">
           <li>
-            <NavLink to="/parametres">CHANGER MOT DE PASSE</NavLink>
+            <NavLink to="/app/parametres">CHANGER MOT DE PASSE</NavLink>
           </li>
         </ul>
         <div className='nouveau-clients'>
           <div className="form">
-            <InputForm label="Ancien mot de passe" value="" />
-            <InputForm label="Nouveau mot de passe" value="" />
-            <InputForm label="Confirmer mot de passe" value="" />
+            <InputPasswordForm label="Ancien mot de passe" name="lastPassword" />
+            <InputPasswordForm label="Nouveau mot de passe" name="newPassword" />
+            <InputPasswordForm label="Confirmer mot de passe" name="confirmPassword" />
             <div className="btn-group">
               <BtnRouge>Annuler</BtnRouge>
               <BtnVert>Enregistrer</BtnVert>

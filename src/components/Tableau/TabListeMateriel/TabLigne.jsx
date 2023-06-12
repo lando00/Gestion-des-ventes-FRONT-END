@@ -50,7 +50,7 @@ const TabLigne = ({num, design, stock, prixUnitaire, setRechargerPage}) => {
         </div>
         <div className="cellules"> 
             <span>
-                <Link to={`/materiels/modifier/${num}`}>
+                <Link to={`/app/materiels/modifier/${num}`}>
                     <i className='fas fa-pen-to-square'style={{color:'#4caf50'}} title='Editer'></i>
                 </Link>
             </span>

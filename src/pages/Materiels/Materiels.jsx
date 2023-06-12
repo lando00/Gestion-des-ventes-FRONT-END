@@ -7,7 +7,7 @@ const Materiels = () => {
 
   const navigate = useNavigate();
   useEffect(() => { 
-    navigate("/materiels/liste");
+    navigate("/app/materiels/liste");
   },[])
   
   return (
@@ -15,17 +15,17 @@ const Materiels = () => {
        <TitrePage titre="Matériels" />
        <ul className="sous-menu">
           <li>
-            <NavLink to="/materiels/liste">TOUS LES MATERIELS</NavLink>
+            <NavLink to="/app/materiels/liste">TOUS LES MATERIELS</NavLink>
           </li>
           <li>
-            <NavLink to="/materiels/liste_materiel_vendu">MATERIEL VENDU</NavLink>
+            <NavLink to="/app/materiels/liste_materiel_vendu">MATERIEL VENDU</NavLink>
           </li>
           <li>
-            <NavLink to="/materiels/nouveau">NOUVEAU MATERIEL</NavLink>
+            <NavLink to="/app/materiels/nouveau">NOUVEAU MATERIEL</NavLink>
           </li>
-          <li>
-            <NavLink to="/materiels/mouvement">MOUVEMENT MATERIEL</NavLink>
-          </li> 
+          {/* <li>
+            <NavLink to="/app/materiels/mouvement">MOUVEMENT MATERIEL</NavLink>
+          </li>  */}
         </ul>
         <Outlet />
     </div>

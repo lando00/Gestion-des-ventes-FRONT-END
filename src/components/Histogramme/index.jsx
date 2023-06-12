@@ -2,7 +2,7 @@ import React from 'react';
 import { BarElement, CategoryScale, Chart, LinearScale, Title, Tooltip } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 
-const index = () => {
+const index = ({listeChiffreAffaire}) => {
 
     Chart.register(
         CategoryScale,
@@ -11,13 +11,15 @@ const index = () => {
         Tooltip,
         Title
     );
-
+    
+    console.log(listeChiffreAffaire)
+    
     const data = {
-        labels: ['Rabe', 'Nirina', 'Jean', 'Toto', 'Tutu', 'Jun'],
+        labels: listeChiffreAffaire.map(client => client.prenom),
         datasets: [
-            {
-                label: 'Sales',
-                data: [12, 19, 3, 5, 2, 3],
+            { 
+                label: "Chiffre d'affaire",
+                data: listeChiffreAffaire.map(client => client.montant),
                 backgroundColor: 'rgba(153, 102, 255, 0.8)',
                 borderColor: 'rgba(153, 102, 255, 1)',
                 borderWidth: 1,

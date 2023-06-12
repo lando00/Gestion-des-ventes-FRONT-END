@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
 import InputForm from '../../../components/InputForm/InputForm';
 import BtnVert from '../../../components/Bouton/BtnVert';
 import BtnRouge from '../../../components/Bouton/BtnRouge';
@@ -40,7 +41,9 @@ const index = () => {
         <InputNumberForm label="Prix unitaire(Ar)" name="prixUnitaire" value={materiel.prixUnitaire} onChangeInput={setMateriel} />
         <InputNumberForm label="Stock" name="stock" value={materiel.stock} onChangeInput={setMateriel} />
         <div className="btn-group">
-          <BtnRouge>Annuler</BtnRouge>
+          <BtnRouge>
+            <Link to="/app/materiels/liste">Annuler</Link>
+          </BtnRouge>
           <BtnVert enregistrer={enregistrer}>{txtBtn}</BtnVert>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './NouveauClients.css';
 import InputForm from '../../../components/InputForm/InputForm';
 import BtnVert from '../../../components/Bouton/BtnVert';
@@ -40,7 +41,9 @@ const index = () => {
         <InputForm label="Prénom(s)" name="prenom" value={client.prenom} onChangeInput={setClient} />
         <InputForm label="Téléphone" name="tel" value={client.tel} onChangeInput={setClient} />
         <div className="btn-group">
-          <BtnRouge>Annuler</BtnRouge>
+          <BtnRouge>
+            <Link to="/app/clients/liste">Annuler</Link>
+          </BtnRouge>
           <BtnVert enregistrer={enregistrer}>{txtBtn}</BtnVert>
         </div>
       </div>

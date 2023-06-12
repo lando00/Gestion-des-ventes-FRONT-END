@@ -29,3 +29,8 @@
 .btn-rouge:hover {
     background-color: #ce392f;
 }
+
+.btn a {
+    text-decoration: none;
+    color : #fff!important;
+}

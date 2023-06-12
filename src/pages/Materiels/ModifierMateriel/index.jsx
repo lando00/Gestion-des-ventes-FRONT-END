@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import InputForm from '../../../components/InputForm/InputForm';
 import InputNumberForm from '../../../components/InputForm/InputNumberForm';
 import BtnVert from '../../../components/Bouton/BtnVert';
@@ -44,7 +44,9 @@ const index = () => {
         <InputNumberForm label="Prix unitaire(Ar)" name="prixUnitaire" value={materiel.prixUnitaire} onChangeInput={setMateriel} />
         <InputNumberForm label="Stock" name="stock" value={materiel.stock} onChangeInput={setMateriel} />
         <div className="btn-group">
-          <BtnRouge>Annuler</BtnRouge>
+          <BtnRouge>
+            <Link to="/app/materiels/liste">Annuler</Link>
+          </BtnRouge>
           <BtnVert enregistrer={enregistrer}>{txtBtn}</BtnVert>
         </div>
       </div>

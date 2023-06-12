@@ -3,14 +3,16 @@ import '../TabStyle.css';
 import './TabEffectuerVente.css';
 import TabLigne from './TabLigne';
 import TabLigneTitre from './TabLigneTitre';
+import PasDeResultat2 from '../PasDeResultat/PasDeMateriel2'
 
-const index = () => {
+const index = ({listeMaterielAcheter, handleClickIconDelete, handleChangeQuantite}) => {
   return (
     <div className="tableau tab-liste-clients tab-liste-vente">
         <TabLigneTitre />
-        <TabLigne />
-        <TabLigne />
-        <TabLigne />
+        {
+          listeMaterielAcheter.length > 0 ? listeMaterielAcheter.map(materiel => <TabLigne materiel={materiel} handleClickIconDelete={handleClickIconDelete} handleChangeQuantite={handleChangeQuantite} />) : <PasDeResultat2 /> 
+        }
+        
     </div>
   )
 }

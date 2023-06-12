@@ -26,6 +26,7 @@ const index = () => {
     return materielRechercher ? resultatRecherche : listeMateriel;
   }
 
+
   return (
     <div>
       <BarreRecherche placeholder="materiel" rechercher={setMaterielRechercher} />

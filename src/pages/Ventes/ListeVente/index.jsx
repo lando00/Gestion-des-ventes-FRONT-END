@@ -13,11 +13,8 @@ const index = () => {
   const [rechargerPage, setRechargerPage] = useState(false);
 
   useEffect(() => { 
-    axios.get('/vente/liste')
-      .then((reponse) => {
-        setListeVente(reponse.data);
-        setShowLoader(false);
-      })
+    getListeTousLesVentes();
+    
   }, [rechargerPage]);
 
 
@@ -28,10 +25,54 @@ const index = () => {
     return recherche ? resultatRecherche : listeVente;
   }
 
+  const getListeTousLesVentes = () => {
+    axios.get('/vente/liste')
+    .then((reponse) => {
+      setListeVente(reponse.data);
+      setShowLoader(false);
+    })
+  }
+
+  const getListeMaterielParMois = (m) => {
+    if(m != "0"){
+      axios.get(`/vente/filtrer_par_mois/${m}`)
+      .then(response => {
+        setListeVente(response.data)
+      })
+    }else{
+      getListeTousLesVentes();
+    }
+  }
+
+  const getListeMaterielParAnnee = (m) => {
+    if(m != "aaaa"){
+      axios.get(`/vente/filtrer_par_annee/${m}`)
+      .then(response => {
+        setListeVente(response.data)
+      })
+    }else{
+      getListeTousLesVentes();
+    }
+   
+  }
+
+  const getListeMaterielParDate = (date1, date2) => {
+    axios.get(`/vente/filtrer_par_date/${date1}/${date2}`)
+    .then(response => {
+      setListeVente(response.data)
+    })
+   
+  }
+
+
+ 
+
+
+
   return (
     <div className='liste-vente'>
         <BarreRecherche placeholder="client" rechercher={setRecherche} />
-        <FiltreTab />
+        <FiltreTab listeMaterielParMois={getListeMaterielParMois} getListeMaterielParAnnee={getListeMaterielParAnnee} getListeMaterielParDate={getListeMaterielParDate} />
         <TabListeVente listeVente={listeVenteFiltrer(recherche)} showLoader={showLoader} setRechargerPage={setRechargerPage}/>
     </div>
   )

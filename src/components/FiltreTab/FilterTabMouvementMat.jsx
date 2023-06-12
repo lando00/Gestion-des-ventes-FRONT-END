@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import './FiltreTab.css';
-import axios from '../../helpers/axiosConfig'
+import './FiltreTab.css'
 
-const FiltreTab = ({listeMaterielParMois, getListeMaterielParAnnee, getListeMaterielParDate}) => {
+const FiltreTabMouvementMat = ({listeMaterielParMois, getListeMaterielParAnnee, getListeMaterielParDate}) => {
 
   const tabMois = [
     {
@@ -69,32 +68,10 @@ const FiltreTab = ({listeMaterielParMois, getListeMaterielParAnnee, getListeMate
 
   const [date1, setDate1] = useState("");
   const [date2, setDate2] = useState("");
-  const [data, setData] = useState([]);
-  const [annee, setAnnee] = useState([]);
 
   useEffect(() => {
-    if(date2 === ""){
-      setDate2(date1);
-    }
-
-    if(date1 === ""){
-      setDate1(date2)
-    }
-
-    getListeMaterielParDate(date1, date2);
-
-  }, [date1, date2]);
-
-  useEffect(() => {
-    axios.get('/vente/liste')
-    .then((reponse) => {
-      setData(reponse.data);
-    })
-  }, [])
-
-  const getAnnee = () => {
-    return [...new Set(data.map(d => new Date(d.date).getFullYear()))];
-  }
+    getListeMaterielParDate(date1, date2)
+  }, [date2])
 
   return (
     <div className='filtre-tab'>
@@ -109,10 +86,8 @@ const FiltreTab = ({listeMaterielParMois, getListeMaterielParAnnee, getListeMate
         <label>Année : </label>
         <select onChange={e => {getListeMaterielParAnnee(e.target.value); setDate1(""); setDate2("");}}>
             <option value="aaaa">aaaa</option>
-            {
-              getAnnee().map(annee => <option value={annee} >{annee}</option>)
-            }
-            
+            <option value="2023" >2023</option>
+            <option value="2022">2022</option>
         </select>
         <span>ou</span>
         <label>Dates : </label>
@@ -123,4 +98,4 @@ const FiltreTab = ({listeMaterielParMois, getListeMaterielParAnnee, getListeMate
   )
 }
 
-export default FiltreTab
+export default FiltreTabMouvementMat
